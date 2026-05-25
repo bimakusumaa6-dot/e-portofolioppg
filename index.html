@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="E-Portfolio PPG - Bima Kusuma Ardhana | Calon Guru Profesional">
+  <title>E-Portfolio PPG | Bima Kusuma Ardhana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader-content">
+      <div class="loader-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h2>E-Portfolio PPG</h2>
+      <p>Bima Kusuma Ardhana</p>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ========== SCROLL PROGRESS BAR ========== -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- ========== NAVBAR STICKY ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#beranda" class="nav-logo">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <span>BKA</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li><a href="#profil" class="nav-link">Profil</a></li>
+        <li><a href="#analisis" class="nav-link">Analisis</a></li>
+        <li><a href="#model-guru" class="nav-link">Model Guru</a></li>
+        <li><a href="#kontak" class="nav-link">Kontak</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MUSIC PLAYER ========== -->
+  <!-- EDIT: Ganti URL di data-audio-src dengan link MP3/Spotify embed/YouTube audio Anda -->
+  <div class="music-player" id="music-player">
+    <button class="music-btn" id="music-toggle" aria-label="Play/Pause musik">
+      <i class="fas fa-play" id="music-icon"></i>
+    </button>
+    <div class="music-info">
+      <span class="music-label">Perunggu - Gemilang</span>
+      <span class="music-title" id="music-title">Perunggu-Gemilang</span>
+    </div>
+    <input type="range" class="music-volume" id="music-volume" min="0" max="100" value="40" aria-label="Volume">
+    <!-- Audio: ganti src di bawah dengan link file MP3 Anda -->
+    <audio id="bg-music" loop preload="auto"
+  	data-audio-src="music/Perunggu - Gemilang.mp3">
+  	<source src="music/Perunggu - Gemilang.mp3" type="audio/mpeg">
+</audio>
+  </div>
+
+  <!-- ==================== 1. HERO / BERANDA ==================== -->
+  <section id="beranda" class="hero section">
+    <div class="hero-bg">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="hero-shape shape-3"></div>
+      <div class="floating-icons">
+        <i class="fas fa-book-open fi-1"></i>
+        <i class="fas fa-pencil-alt fi-2"></i>
+        <i class="fas fa-lightbulb fi-3"></i>
+        <i class="fas fa-users fi-4"></i>
+      </div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text reveal">
+        <span class="hero-badge"><i class="fas fa-star"></i> E-Portofolio PPG</span>
+        <!-- EDIT: Ganti foto profil - letakkan file di folder images/ dan ubah src -->
+        <div class="hero-photo-wrap">
+          <img src="images/foto-profil.jpg" alt="Bima Kusuma Ardhana" class="hero-photo"
+            onerror="this.src='https://ui-avatars.com/api/?name=Bima+Kusuma+Ardhana&size=400&background=1e3a5f&color=ffd700&bold=true'">
+          <div class="photo-ring"></div>
+        </div>
+        <h1 class="hero-name">Bima Kusuma Ardhana</h1>
+        <p class="hero-slogan">
+          <span id="typing-text"></span><span class="typing-cursor">|</span>
+        </p>
+        <div class="hero-buttons">
+          <a href="#profil" class="btn btn-primary"><i class="fas fa-user"></i> Tentang Saya</a>
+          <a href="#analisis" class="btn btn-outline"><i class="fas fa-chart-line"></i> Analisis Pembelajaran</a>
+          <a href="#model-guru" class="btn btn-outline"><i class="fas fa-user-tie"></i> Model Guru</a>
+          <a href="#kontak" class="btn btn-gold"><i class="fas fa-envelope"></i> Kontak</a>
+        </div>
+      </div>
+    </div>
+    <a href="#profil" class="scroll-down" aria-label="Scroll ke bawah">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ==================== 2. PROFIL MAHASISWA ==================== -->
+  <section id="profil" class="section profil-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Tentang Saya</span>
+        <h2>Profil Mahasiswa</h2>
+        <p>Perjalanan, inspirasi, dan komitmen menjadi pendidik profesional</p>
+      </div>
+
+      <div class="profil-grid">
+        <div class="glass-card profil-intro reveal">
+          <div class="profil-header">
+            <i class="fas fa-id-card profil-icon"></i>
+            <div>
+              <!-- EDIT: Ubah nama jika perlu -->
+              <h3>Bima Kusuma Ardhana</h3>
+              <p class="profil-origin"><i class="fas fa-map-marker-alt"></i> Asal: <!-- EDIT --> Purworejo, Jawa 		Tengah</p>
+            </div>
+          </div>
+          <p>Saya adalah mahasiswa PPG yang berkomitmen mengembangkan kompetensi pedagogik dan profesional untuk menjadi 	guru masa depan yang inspiratif, inovatif, dan berpihak pada peserta didik. Saya percaya bahwa seorang pendidik 	tidak hanya menyampaikan materi, tetapi juga menciptakan suasana belajar yang menyenangkan, memotivasi, dan 	mendukung perkembangan potensi setiap peserta didik. Dengan pribadi yang ramah, mudah beradaptasi, dan semangat 	belajar yang tinggi, saya terus berupaya menghadirkan pembelajaran yang interaktif, kreatif, dan bermakna sebagai 	bekal menjadi pendidik profesional yang berempati dan peduli terhadap kebutuhan peserta didik.</p>
+        </div>
+
+        <div class="glass-card budaya-card reveal">
+          <!-- EDIT: Ganti gambar daerah asal di images/daerah-asal.jpg -->
+          <img src="images/daerah-asal.jpg" alt="Budaya Daerah Asal" class="budaya-img"
+            onerror="this.style.display='none'">
+          <div class="budaya-content">
+            <h4><i class="fas fa-landmark"></i> Keunikan Budaya Daerah</h4>
+            <!-- EDIT: Ceritakan budaya daerah Anda -->
+            <p>Purworejo merupakan salah satu daerah di Jawa Tengah yang memiliki keunikan dari perpaduan kekayaan alam, budaya, dan kuliner khasnya. Daerah ini dikenal dengan suasana yang asri, hamparan sawah yang luas, serta masyarakat yang ramah dan menjunjung tinggi nilai gotong royong. Purworejo juga terkenal dengan komoditas unggulan seperti durian, manggis, dan kambing Etawa yang menjadi ikon khas daerah. Dari sisi budaya, Purworejo memiliki kesenian tradisional Dolalak, tarian khas yang mencerminkan semangat, kekompakan, dan identitas masyarakat setempat. Selain itu, kuliner tradisional seperti clorot dan kue lompong turut menjadi ciri khas yang memperkaya kearifan lokal Purworejo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card cerita-card reveal">
+        <h4><i class="fas fa-book-reader"></i> Cerita Singkat & Perjalanan</h4>
+        <!-- EDIT: Ganti narasi sesuai kisah Anda -->
+        <p>Perjalanan pendidikan saya dimulai dari semangat kecil di bangku sekolah hingga pengalaman mengajar di berbagai jenjang. Setiap langkah membentuk keyakinan bahwa guru bukan sekadar pengajar, melainkan pembimbing yang membuka jendela dunia bagi peserta didik.</p>
+      </div>
+
+      <div class="inspirasi-grid reveal">
+        <div class="inspirasi-card">
+          <i class="fas fa-heart"></i>
+          <h5>Inspirasi Menjadi Guru</h5>
+          <p><!-- EDIT --> Guru-guru hebat yang pernah menginspirasi saya dengan kesabaran, kreativitas, dan dedikasi tanpa pamrih.</p>
+        </div>
+        <div class="inspirasi-card">
+          <i class="fas fa-bullseye"></i>
+          <h5>Tujuan Menjadi Pendidik</h5>
+          <p><!-- EDIT --> Membantu peserta didik menemukan potensi terbaiknya dan membekali mereka dengan karakter serta kompetensi abad 21.</p>
+        </div>
+        <div class="inspirasi-card">
+          <i class="fas fa-flag"></i>
+          <h5>Harapan untuk Pendidikan Indonesia</h5>
+          <p><!-- EDIT --> Pendidikan yang merata, bermakna, dan menghasilkan generasi cerdas karakter yang siap berkontribusi bagi bangsa.</p>
+        </div>
+      </div>
+
+      <!-- Timeline Pendidikan -->
+      <div class="timeline-section reveal">
+        <h3 class="timeline-title"><i class="fas fa-route"></i> Timeline Perjalanan Pendidikan</h3>
+        <div class="timeline">
+          <!-- EDIT: Sesuaikan timeline dengan riwayat Anda -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2008 – 2014</span>
+              <h4>Sekolah Dasar</h4>
+              <p>SD N Candingasinan</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2014 – 2017</span>
+              <h4>Sekolah Menengah Pertama</h4>
+              <p>SMP N 9 Purworejo</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2017 – 2020</span>
+              <h4>Sekolah Menengah Atas</h4>
+              <p>SMA N 7 Purworejo</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2020 – 2024</span>
+              <h4>Perguruan Tinggi</h4>
+              <p>Universitas Sebelas Maret - S1 Pendidikan Guru Sekolah Dasar</p>
+            </div>
+          </div>
+	  <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="timeline-year">2026 – Sekarang</span>
+              <h4>Pendidikan Profesi</h4>
+              <p>Universitas Sarjanawiyata Tamansiswa - Pendidikan Profesi Guru</p>
+	    </div>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="quote-block reveal">
+        <i class="fas fa-quote-left"></i>
+        <p>"Pendidikan bukan hanya tentang mengajar, tetapi tentang menyalakan harapan dan membentuk masa depan."</p>
+        <cite>— Kutipan Inspiratif</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ==================== 3. ANALISIS ARTEFAK ==================== -->
+  <section id="analisis" class="section analisis-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Refleksi Pembelajaran</span>
+        <h2>Analisis Artefak Produk Rencana & Perangkat Pembelajaran</h2>
+        <p>Refleksi mendalam atas proses penyusunan dan penerapan perangkat pembelajaran</p>
+      </div>
+
+      <div class="progress-refleksi reveal">
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <div class="progress-bar-wrap">
+            <span>Kendala Penyusunan</span>
+            <div class="progress-bar"><div class="progress-fill" data-width="75"></div></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fas fa-lightbulb"></i></div>
+          <div class="progress-bar-wrap">
+            <span>Teori Pedagogi</span>
+            <div class="progress-bar"><div class="progress-fill" data-width="90"></div></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fas fa-trophy"></i></div>
+          <div class="progress-bar-wrap">
+            <span>Faktor Keberhasilan</span>
+            <div class="progress-bar"><div class="progress-fill" data-width="85"></div></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="progress-bar-wrap">
+            <span>Penyesuaian Kelas</span>
+            <div class="progress-bar"><div class="progress-fill" data-width="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion reveal" id="analisis-accordion">
+        <div class="accordion-item active">
+          <button class="accordion-header">
+            <i class="fas fa-puzzle-piece"></i>
+            <span>A. Kendala Penyusunan Produk Pembelajaran</span>
+            <i class="fas fa-chevron-down accordion-arrow"></i>
+          </button>
+          <div class="accordion-body">
+            <ul class="refleksi-list">
+              <li><strong>Modul Ajar:</strong> Kesulitan menyusun modul yang terintegrasi dengan kurikulum terbaru dan kebutuhan peserta didik.</li>
+              <li><strong>Kurikulum:</strong> Penyesuaian dengan Kurikulum Merdeka membutuhkan pemahaman mendalam dan waktu adaptasi.</li>
+              <li><strong>Waktu:</strong> Pengelolaan waktu antara teori, praktik, dan penyusunan dokumen menjadi tantangan utama.</li>
+              <li><strong>Metode:</strong> Pemilihan metode pembelajaran yang tepat sesuai karakteristik kelas.</li>
+              <li><strong>Media & Teknologi:</strong> Kendala akses perangkat dan kesesuaian perangkat di beberapa lokasi kelas untuk praktik.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <i class="fas fa-brain"></i>
+            <span>B. Teori atau Konsep Pedagogi yang Digunakan</span>
+            <i class="fas fa-chevron-down accordion-arrow"></i>
+          </button>
+          <div class="accordion-body">
+            <div class="teori-grid">
+              <div class="teori-card"><i class="fas fa-users"></i><h5>Pembelajaran Berdiferensiasi</h5><p>Menyesuaikan strategi dengan gaya dan kemampuan siswa.</p></div>
+              <div class="teori-card"><i class="fas fa-project-diagram"></i><h5>Project Based Learning</h5><p>Proyek nyata sebagai media pembelajaran bermakna.</p></div>
+              <div class="teori-card"><i class="fas fa-question-circle"></i><h5>Problem Based Learning</h5><p>Permasalahan autentik sebagai pemicu berpikir kritis.</p></div>
+              <div class="teori-card"><i class="fas fa-globe"></i><h5>Pembelajaran Kontekstual</h5><p>Menghubungkan materi dengan kehidupan sehari-hari.</p></div>
+              <div class="teori-card"><i class="fas fa-feather"></i><h5>Merdeka Belajar</h5><p>Kebebasan belajar sesuai minat dan bakat peserta didik.</p></div>
+              <div class="teori-card"><i class="fas fa-hands-helping"></i><h5>Pembelajaran Aktif & Kolaboratif</h5><p>Siswa terlibat aktif dalam proses konstruksi pengetahuan.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <i class="fas fa-check-circle"></i>
+            <span>C. Faktor Keberhasilan Penerapan</span>
+            <i class="fas fa-chevron-down accordion-arrow"></i>
+          </button>
+          <div class="accordion-body">
+            <ul class="refleksi-list success-list">
+              <li>Antusiasme peserta didik yang tinggi</li>
+              <li>Media pembelajaran yang menarik dan variatif</li>
+              <li>Pengelolaan kelas yang efektif dan kondusif</li>
+              <li>Dukungan penuh dari guru pamong</li>
+              <li>Perencanaan pembelajaran yang matang dan terstruktur</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <i class="fas fa-sliders-h"></i>
+            <span>D. Perubahan Komponen untuk Kelas Berbeda</span>
+            <i class="fas fa-chevron-down accordion-arrow"></i>
+          </button>
+          <div class="accordion-body">
+            <ul class="refleksi-list">
+              <li><strong>Karakteristik peserta didik:</strong> Penyesuaian strategi untuk siswa dengan beragam latar belakang.</li>
+              <li><strong>Kondisi sekolah:</strong> Adaptasi terhadap lingkungan urban maupun rural.</li>
+              <li><strong>Sarana prasarana:</strong> Alternatif media saat fasilitas terbatas.</li>
+              <li><strong>Gaya belajar:</strong> Visual, auditori, dan kinestetik diakomodasi dalam satu rencana.</li>
+              <li><strong>Tingkat kemampuan:</strong> Diferensiasi tugas dan penilaian autentik.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Perangkat Pembelajaran -->
+      <div class="gallery-section reveal">
+        <h3><i class="fas fa-folder-open"></i> Gallery Perangkat Pembelajaran</h3>
+        <p class="gallery-hint">Tempat dokumentasi PDF dan materi</p>
+        <div class="gallery-grid">
+          <!-- EDIT: Ganti href dengan path file PDF Anda di folder documents/ -->
+          <div class="gallery-item glass-card">
+            <div class="gallery-icon"><i class="fas fa-file-pdf"></i></div>
+            <h4>RPM Siklus 1</h4>
+            <p>Rencana Pembelajaran Mendalam Siklus 1</p>
+            <a href="documents/rpm-siklus-1.pdf" class="btn btn-sm btn-primary" target="_blank"><i class="fas fa-eye"></i> Preview</a>
+            <a href="documents/rpm-siklus-1.pdf" class="btn btn-sm btn-outline" download><i class="fas fa-download"></i> Download</a>
+          </div>
+          <div class="gallery-item glass-card">
+            <div class="gallery-icon"><i class="fas fa-file-pdf"></i></div>
+            <h4>RPM Siklus 2</h4>
+            <p>Rencana Pembelajaran Mendalam Siklus 2</p>
+            <a href="documents/rpm-siklus-2.pdf" class="btn btn-sm btn-primary" target="_blank"><i class="fas fa-eye"></i> Preview</a>
+            <a href="documents/rpm-siklus-2.pdf" class="btn btn-sm btn-outline" download><i class="fas fa-download"></i> Download</a>
+          </div>
+          <div class="gallery-item glass-card">
+            <div class="gallery-icon"><i class="fas fa-file-pdf"></i></div>
+            <h4>RPM Siklus 3</h4>
+            <p>Rencana Pembelajaran Mendalam Siklus 3</p>
+            <a href="documents/rpm-siklus-3.pdf" class="btn btn-sm btn-primary" target="_blank"><i class="fas fa-eye"></i> Preview</a>
+            <a href="documents/rpm-siklus-3.pdf" class="btn btn-sm btn-outline" download><i class="fas fa-download"></i> Download</a>
+          </div>
+          <div class="gallery-item glass-card">
+            <div class="gallery-icon"><i class="fas fa-file-pdf"></i></div>
+            <h4>Lembar Kerja 7 & 8</h4>
+            <p>Dokumentasi Hasil Penilaian Kegiatan Pembelajaran</p>
+            <a href="documents/lembar-kerja78.pdf" class="btn btn-sm btn-primary" target="_blank"><i class="fas fa-eye"></i> Preview</a>
+            <a href="documents/lembar-kerja78.pdf" class="btn btn-sm btn-outline" download><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. MODEL GURU ==================== -->
+  <section id="model-guru" class="section model-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Cita-Cita Profesional</span>
+        <h2>Model Guru yang Dituju</h2>
+        <p>Visi, misi, dan kompetensi calon guru profesional</p>
+      </div>
+
+      <div class="visi-misi reveal">
+        <div class="glass-card visi-card">
+          <i class="fas fa-eye"></i>
+          <h4>Visi</h4>
+          <!-- EDIT -->
+          <p>Menjadi guru profesional yang inspiratif, berintegritas, dan mampu menciptakan pembelajaran bermakna bagi setiap peserta didik.</p>
+        </div>
+        <div class="glass-card misi-card">
+          <i class="fas fa-bullseye"></i>
+          <h4>Misi</h4>
+          <!-- EDIT -->
+          <ul>
+            <li>Mengembangkan pembelajaran inovatif berbasis kebutuhan siswa</li>
+            <li>Membimbing peserta didik berkarakter dan berkompetensi</li>
+            <li>Berpartisipasi aktif dalam pengembangan profesional berkelanjutan</li>
+            <li>Menjadi teladan dalam etika dan profesionalisme</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="kompetensi-section reveal">
+        <h3><i class="fas fa-layer-group"></i> Kompetensi yang Dikembangkan</h3>
+        <div class="kompetensi-grid">
+          <div class="kompetensi-card" data-animate>
+            <div class="kompetensi-icon"><i class="fas fa-book"></i></div>
+            <h5>Pedagogik</h5>
+            <p>Perencanaan, pelaksanaan, dan evaluasi pembelajaran yang efektif.</p>
+            <div class="kompetensi-bar"><div style="width: 85%"></div></div>
+          </div>
+          <div class="kompetensi-card" data-animate>
+            <div class="kompetensi-icon"><i class="fas fa-briefcase"></i></div>
+            <h5>Profesional</h5>
+            <p>Penguasaan materi, riset, dan pengembangan keprofesian berkelanjutan.</p>
+            <div class="kompetensi-bar"><div style="width: 80%"></div></div>
+          </div>
+          <div class="kompetensi-card" data-animate>
+            <div class="kompetensi-icon"><i class="fas fa-handshake"></i></div>
+            <h5>Sosial</h5>
+            <p>Komunikasi dengan siswa, orang tua, dan sesama pendidik.</p>
+            <div class="kompetensi-bar"><div style="width: 88%"></div></div>
+          </div>
+          <div class="kompetensi-card" data-animate>
+            <div class="kompetensi-icon"><i class="fas fa-user"></i></div>
+            <h5>Kepribadian</h5>
+            <p>Stabilitas emosi, wibawa, dan menjadi teladan bagi peserta didik.</p>
+            <div class="kompetensi-bar"><div style="width: 82%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="karakter-section reveal">
+        <h3><i class="fas fa-gem"></i> Karakter Guru yang Dibangun</h3>
+        <div class="karakter-orbit">
+          <div class="karakter-center"><i class="fas fa-user-graduate"></i><span>Guru Profesional</span></div>
+          <div class="karakter-item ki-1"><i class="fas fa-palette"></i> Kreatif</div>
+          <div class="karakter-item ki-2"><i class="fas fa-rocket"></i> Inovatif</div>
+          <div class="karakter-item ki-3"><i class="fas fa-clock"></i> Disiplin</div>
+          <div class="karakter-item ki-4"><i class="fas fa-fire"></i> Inspiratif</div>
+          <div class="karakter-item ki-5"><i class="fas fa-child"></i> Berpihak pada Siswa</div>
+        </div>
+      </div>
+
+      <div class="diagram-section reveal">
+        <h3><i class="fas fa-chart-pie"></i> Diagram Perkembangan Diri</h3>
+        <div class="diagram-wrap">
+          <canvas id="chart-kompetensi"></canvas>
+        </div>
+      </div>
+
+      <div class="quotes-slider reveal">
+        <div class="quote-slide active">
+          <p>"Seorang guru yang baik adalah seperti lilin — ia menghabiskan dirinya untuk menerangi jalan bagi orang lain."</p>
+        </div>
+        <div class="quote-slide">
+          <p>"Mengajar adalah seni tertinggi. Guru membuka pintu, tetapi Anda harus masuk sendiri."</p>
+        </div>
+        <div class="quote-slide">
+          <p>"Pendidikan adalah senjata paling ampuh untuk mengubah dunia."</p>
+        </div>
+        <div class="quote-dots">
+          <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. KONTAK ==================== -->
+  <section id="kontak" class="section kontak-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Hubungi Saya</span>
+        <h2>Kontak & Penutup</h2>
+        <p>Terima kasih telah mengunjungi E-Portofolio saya</p>
+      </div>
+
+      <div class="kontak-grid reveal">
+        <div class="kontak-info glass-card">
+          <h4>Informasi Kontak</h4>
+          <!-- EDIT: Ganti data kontak Anda -->
+          <div class="kontak-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <a href="mailto:bimakusumaa6@gmail.com">bimakusumaa@gmail.com</a>
+            </div>
+          </div>
+          <div class="kontak-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <span>Telepon</span>
+              <a href="tel:085842607056">085842607056</a>
+            </div>
+          </div>
+          <div class="kontak-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span>Lokasi</span>
+              <p>Yogyakarta, Indonesia</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <!-- EDIT: Ganti href media sosial -->
+            <a href="https://www.instagram.com/bimaaksm?igsh=MXYydHhhZ2Nkc3Awcg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@bimakusuma4951?si=pARoqV4v6fZZpGtC" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/6285842607056" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:bimakusuma.ardhana@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <form class="kontak-form glass-card" id="kontak-form">
+          <h4>Kirim Pesan</h4>
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required placeholder="Nama Anda">
+          </div>
+          <div class="form-group">
+            <label for="email-form">Email</label>
+            <input type="email" id="email-form" name="email" required placeholder="email@contoh.com">
+          </div>
+          <div class="form-group">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan Anda..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+        </form>
+      </div>
+
+      <div class="thank-you reveal">
+        <i class="fas fa-heart"></i>
+        <h3>Terima Kasih</h3>
+        <p>Atas kunjungan dan perhatian Anda dalam meninjau E-Portfolio PPG ini. Semoga perjalanan saya menuju guru profesional dapat menjadi inspirasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <!-- EDIT: Tahun --> 2025 <strong>Bima Kusuma Ardhana</strong> — E-Portfolio PPG</p>
+      <p class="footer-sub">Calon Guru Profesional | Dibuat dengan dedikasi untuk pendidikan Indonesia</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
